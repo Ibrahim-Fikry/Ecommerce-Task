@@ -1,0 +1,44 @@
+
+
+
+
+
+<div class="row">
+    <div class="col-6">
+    <label for=""><span style="color: red;">*</span>Product name : </label>
+    <input type="text" class="form-control"  [(ngModel)]="p_name">  
+</div>
+<div class="col-6">
+    <label for="">product image </label>
+      <input type="file" class="form-control"
+           (change)="Uploadimgp_img($event)"  placeholder="only imag/png and file.size < 2000000"
+           [(ngModel)]="p_imgurl">
+</div>
+</div>
+  
+  
+<div class="row ">
+    <div class="col-6">
+        <label for=""><span style="color: red;">*</span>product price </label>
+        <input type="text" class="form-control" [(ngModel)]="p_price">
+    
+    </div>
+    <div class="col-6">
+         <img style="width: 15%;" src="{{p_imgurl}}" alt="">
+   </div>
+</div>
+
+    
+
+<label for="exampleFormControlTextarea1" class="form-label">Eproduct descriptiont </label>
+<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" 
+         [(ngModel)]="p_description"></textarea>
+ <br>
+ <div class="mt-3 ">
+    <button
+    type="button" 
+    class="btn btn-outline-primary" 
+    (click)="addproduct_child()">add server
+   
+</button>
+ </div>
